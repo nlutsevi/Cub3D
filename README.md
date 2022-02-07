@@ -35,6 +35,8 @@ make fclean
 
 • The use of images of the minilibX is strongly recommended.
 
+• If any misconfiguration of any kind is encountered in the file, the program must exit properly and return "Error\n" followed by an explicit error message of your choice.
+
 ### Map
 
 • The map must be composed of only 6 possible characters: 0 for an empty space, for a wall, and N,S,E or W for the player’s start position and spawning orientation.
