@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/13 18:44:24 by nlutsevi          #+#    #+#             */
-/*   Updated: 2021/02/14 18:03:44 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 04:30:05 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	**right_padding(char **mapa, int i, int y)
 {
-	y = ft_strlen(mapa[i]) - 1;
+	y = strlen(mapa[i]) - 1;
 	while (ft_isspace(mapa[i][y]) && mapa[i][y - 1] != '1')
 	{
 		mapa[i][y] = '\0';
@@ -63,7 +63,7 @@ char	**map_matrix(int rows, char **mapa)
 	matrix = (char**)malloc(sizeof(char*) * (rows + 1));
 	while (i < rows)
 	{
-		matrix[i] = ft_strdup(mapa[i]);
+		matrix[i] = strdup(mapa[i]);
 		free(mapa[i]);
 		i++;
 	}
@@ -74,7 +74,7 @@ char	**map_matrix(int rows, char **mapa)
 
 void	flood_fill(char **mapa, t_map *map, int x, int y)
 {
-	if (x < 0 || y < 0 || x >= map->rows || y >= (int)ft_strlen(mapa[x]))
+	if (x < 0 || y < 0 || x >= map->rows || y >= (int)strlen(mapa[x]))
 		ft_error(RED"Map is not closed!"WHITE);
 	if (ft_isspace(mapa[x][y]) || mapa[x][y] == '0' ||\
 		mapa[x][y] == '2' || mapa[x][y] == 'N' || mapa[x][y] == 'S' ||\
@@ -101,7 +101,7 @@ void	map_is_closed(t_map *map)
 	mapa = (char**)malloc(sizeof(char*) * (map->rows + 1));
 	while (i < map->rows)
 	{
-		mapa[i] = ft_strdup(map->aux[i]);
+		mapa[i] = strdup(map->aux[i]);
 		i++;
 	}
 	mapa[i] = NULL;

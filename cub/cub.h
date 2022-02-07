@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 20:07:57 by nlutsevi          #+#    #+#             */
-/*   Updated: 2022/02/07 03:35:59 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 04:29:00 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@
 # define ESC 53
 
 # include "../gnl/get_next_line.h"
-# include "../printf/libft/libft.h"
-# include "../printf/ft_printf.h"
 # include <stdio.h>
 # include "../minilibx_opengl/mlx.h"
 # include <math.h>
@@ -213,6 +211,7 @@ typedef struct	s_global
 	int				bmp;
 }				t_global;
 
+int				ft_isdigit(int c);
 t_res			ft_res(char *line);
 int				config_inic(char *argv, t_global *g);
 int				check_len(char **aux, int num);
@@ -257,5 +256,6 @@ int				screenshot(t_global *g);
 void			sprite_sort(t_global *g);
 char			**ft_fill_map(t_map *map, char **mapa);
 void			ft_read_map2(t_map map, t_global *g);
+char			**ft_split(char const *s, char c);
 
 #endif

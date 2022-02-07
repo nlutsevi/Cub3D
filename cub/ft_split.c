@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/09 11:37:22 by nlutsevi          #+#    #+#             */
-/*   Updated: 2020/07/16 13:05:26 by nlutsevi         ###   ########.fr       */
+/*   Created: 2022/02/07 04:27:49 by nlutsevi          #+#    #+#             */
+/*   Updated: 2022/02/07 04:28:20 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "cub.h"
 
 static int	numstring(char const *s1, char c)
 {

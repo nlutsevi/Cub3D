@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 21:19:14 by nlutsevi          #+#    #+#             */
-/*   Updated: 2021/02/05 20:23:55 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 04:27:40 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_texture(char *line)
 
 	str = ft_split(line, ' ');
 	check_len(str, 2);
-	file = ft_strdup(str[1]);
+	file = strdup(str[1]);
 	free_str(str);
 	return (file);
 }
@@ -58,8 +58,8 @@ t_color	ft_color(char *line)
 		if (line == NULL)
 			ft_error(RED"Too few arguments in color");
 		line++;
-		color.rgb[i] = ft_atoi(&line[0]);
-		line = ft_strchr(line, ',');
+		color.rgb[i] = atoi(&line[0]);
+		line = strchr(line, ',');
 		if (i == 2 && line != NULL)
 		{
 			ft_error(RED"Too many arguments in color\n"WHITE);

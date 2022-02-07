@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 18:15:47 by nlutsevi          #+#    #+#             */
-/*   Updated: 2020/09/17 17:10:49 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 04:26:32 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_one_line(char **content, char **line)
 {
-	*line = ft_strdup(*content);
+	*line = strdup(*content);
 	free(*content);
 	*content = NULL;
 	return (0);
@@ -29,19 +29,19 @@ int		get_new_line(char **content, char **line, int numbytes)
 		return (-1);
 	if (numbytes == 0 && !*content)
 	{
-		*line = ft_strdup("");
+		*line = strdup("");
 		return (0);
 	}
-	else if ((temp = ft_strchr(*content, '\n')))
+	else if ((temp = strchr(*content, '\n')))
 	{
 		*temp = '\0';
-		*line = ft_strdup(*content);
-		temp2 = ft_strdup(temp + 1);
+		*line = strdup(*content);
+		temp2 = strdup(temp + 1);
 		free(*content);
 		*content = temp2;
 		return (1);
 	}
-	else if ((ft_strchr(*content, '\0')))
+	else if ((strchr(*content, '\0')))
 	{
 		ft_one_line(&*content, &*line);
 	}
@@ -62,14 +62,14 @@ int		get_next_line(int fd, char **line)
 	{
 		buff[numbytes] = '\0';
 		if (!(content[fd]))
-			content[fd] = ft_strdup(buff);
+			content[fd] = strdup(buff);
 		else
 		{
 			temp = ft_strjoin(content[fd], buff);
 			free(content[fd]);
 			content[fd] = temp;
 		}
-		if (ft_strchr(buff, '\n'))
+		if (strchr(buff, '\n'))
 			break ;
 	}
 	free(buff);

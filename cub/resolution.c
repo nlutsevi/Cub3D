@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 22:20:47 by nlutsevi          #+#    #+#             */
-/*   Updated: 2021/02/08 16:18:09 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 04:25:00 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ t_res	ft_res(char *line)
 	check_len(aux, 3);
 	if (is_digit(aux[1]) && is_digit(aux[2]))
 	{
-		res.x = ft_atoi(aux[1]);
-		res.y = ft_atoi(aux[2]);
+		res.x = atoi(aux[1]);
+		res.y = atoi(aux[2]);
 	}
 	else
 		ft_error(RED"Wrong map resolution\n"WHITE);

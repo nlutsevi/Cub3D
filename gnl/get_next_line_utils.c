@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/15 14:31:52 by nlutsevi          #+#    #+#             */
-/*   Updated: 2020/07/15 14:35:32 by nlutsevi         ###   ########.fr       */
+/*   Created: 2022/02/07 04:12:05 by nlutsevi          #+#    #+#             */
+/*   Updated: 2022/02/07 04:13:08 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "get_next_line.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
+char			*ft_strjoin(char const *s1, char const *s2)
 {
-	if (alst && new)
+	char	*ptr;
+	size_t	i;
+	size_t	j;
+
+	ptr = (char*)malloc(sizeof(*s1) * strlen(s1) + strlen(s2) + 1);
+	if (!ptr)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s1[i])
 	{
-		new->next = *alst;
-		*alst = new;
+		ptr[j++] = s1[i];
+		i++;
 	}
+	i = 0;
+	while (s2[i])
+	{
+		ptr[j++] = s2[i];
+		i++;
+	}
+	ptr[j] = 0;
+	return (ptr);
 }

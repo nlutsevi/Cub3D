@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 16:31:37 by nlutsevi          #+#    #+#             */
-/*   Updated: 2021/02/11 15:34:24 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 04:19:29 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int		screenshot(t_global *g)
 	int		file;
 	t_bmp	bmp;
 
-	ft_bzero(&bmp, sizeof(t_bmp));
+	bzero(&bmp, sizeof(t_bmp));
 	if (!((file = open("cub3D.bmp", O_WRONLY \
 	| O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR)) > 0))
 		ft_error(RED".bmp screenshot couldn't be created"WHITE);

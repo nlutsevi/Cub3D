@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 17:25:33 by nlutsevi          #+#    #+#             */
-/*   Updated: 2022/02/07 02:20:52 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 04:18:58 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 # include <sys/types.h>
 # include <fcntl.h>
 # include <unistd.h>
-# include "../printf/libft/libft.h"
 
 int		get_next_line(int fd, char **line);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 19:05:17 by nlutsevi          #+#    #+#             */
-/*   Updated: 2021/02/14 18:02:43 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 04:24:09 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char		**ft_fill_map(t_map *map, char **mapa)
 	ssize_t		len;
 
 	i = 0;
-	y = ft_strlen(mapa[i]) - 1;
+	y = strlen(mapa[i]) - 1;
 	while (i < map->rows)
 	{
-		len = map->columns - ft_strlen(mapa[i]);
+		len = map->columns - strlen(mapa[i]);
 		while (ft_isspace(mapa[i][y]) && (mapa[i][y - 1] != '1'))
 		{
 			len++;

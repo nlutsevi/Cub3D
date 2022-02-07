@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 19:58:10 by nlutsevi          #+#    #+#             */
-/*   Updated: 2021/02/11 15:33:40 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 04:23:19 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int			valid_map(char *line)
 			line[i] == 'E' || ft_isspace(line[i]) || line[i] == '1' || \
 			line[i] == '0' || line[i] == '2')
 		i++;
-	if (i == ft_strlen(line))
+	if (i == strlen(line))
 		return (1);
 	else
 		ft_error(RED"Map is wrong\n"WHITE);
@@ -50,7 +50,7 @@ void		map_calculation(char *line, int ret, t_map *map)
 			map->buff = aux2;
 			map->rows++;
 		}
-		len = ft_strlen(line);
+		len = strlen(line);
 		if (len > map->columns)
 			map->columns = len;
 		free(aux);
@@ -78,7 +78,7 @@ void		ft_read_map(int fd, t_global *g)
 	map.columns = 0;
 	frstline = 0;
 	line_count = 0;
-	map.buff = ft_strdup("");
+	map.buff = strdup("");
 	while ((ret = get_next_line(fd, &line)) >= 0)
 	{
 		ft_map_exists(ret, line_count, line);

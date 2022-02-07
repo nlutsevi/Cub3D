@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 15:31:23 by nlutsevi          #+#    #+#             */
-/*   Updated: 2021/02/14 19:12:26 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 04:30:21 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ t_img	*init_textures(t_global *g)
 	t_img	*texture;
 
 	texture = malloc(sizeof(t_img) * 5);
-	ft_bzero(texture, sizeof(t_img));
+	bzero(texture, sizeof(t_img));
 	if (!(texture[0].img_ptr = mlx_xpm_file_to_image(g->mlx.mlx, \
 	g->map.no, &texture[0].width, &texture[0].height)))
 		ft_error(RED"Can't open NO texture!"WHITE);

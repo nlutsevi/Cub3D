@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 19:44:23 by nlutsevi          #+#    #+#             */
-/*   Updated: 2021/02/14 18:03:33 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 04:29:47 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ void	args_checker(int argc, char **argv, t_global *g)
 	g->bmp = 0;
 	if (argc > 3 || argc <= 1)
 		ft_error(RED"Bad number of arguments\n"WHITE);
-	if (ft_strlen(argv[1]) < 5)
+	if (strlen(argv[1]) < 5)
 		ft_error(RED"Wrong file\n"RED);
-	if (ft_strncmp(argv[1] + ft_strlen(argv[1]) - 4, ".cub", 4) > 0)
+	if (strncmp(argv[1] + strlen(argv[1]) - 4, ".cub", 4) > 0)
 		ft_error(RED"Not .cub file\n"WHITE);
 	if (argc == 3)
 	{
-		if (ft_strncmp(argv[2], "--save", 6) != 0)
+		if (strncmp(argv[2], "--save", 6) != 0)
 			ft_error(RED"Third arguments is not --save"WHITE);
 		else
 		{

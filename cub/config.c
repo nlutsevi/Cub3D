@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 21:52:34 by nlutsevi          #+#    #+#             */
-/*   Updated: 2021/02/10 18:48:54 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 04:29:29 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 int		map_parser(char *line, char *p, t_global *g)
 {
-	if ((p = ft_strchr(line, 'R')) != NULL && *(p + 1) == ' ')
+	if ((p = strchr(line, 'R')) != NULL && *(p + 1) == ' ')
 		g->map.res = ft_res(line);
-	else if ((p = ft_strnstr(line, "NO", ft_strlen(line))) != NULL \
+	else if ((p = strnstr(line, "NO", strlen(line))) != NULL \
 		&& *(p + 2) == ' ')
 		g->map.no = ft_texture(line);
-	else if ((p = ft_strnstr(line, "SO", ft_strlen(line))) != NULL \
+	else if ((p = strnstr(line, "SO", strlen(line))) != NULL \
 		&& *(p + 2) == ' ')
 		g->map.so = ft_texture(line);
-	else if ((p = ft_strnstr(line, "WE", ft_strlen(line))) != NULL \
+	else if ((p = strnstr(line, "WE", strlen(line))) != NULL \
 		&& *(p + 2) == ' ')
 		g->map.we = ft_texture(line);
-	else if ((p = ft_strnstr(line, "EA", ft_strlen(line))) != NULL \
+	else if ((p = strnstr(line, "EA", strlen(line))) != NULL \
 		&& *(p + 2) == ' ')
 		g->map.ea = ft_texture(line);
-	else if ((p = ft_strrchr(line, 'S')) != NULL && *(p + 1) == ' ')
+	else if ((p = strrchr(line, 'S')) != NULL && *(p + 1) == ' ')
 		g->map.s = ft_texture(line);
-	else if ((p = ft_strchr(line, 'F')) != NULL && *(p + 1) == ' ')
+	else if ((p = strchr(line, 'F')) != NULL && *(p + 1) == ' ')
 		g->map.floor = ft_color(line);
-	else if ((p = ft_strchr(line, 'C')) != NULL && *(p + 1) == ' ')
+	else if ((p = strchr(line, 'C')) != NULL && *(p + 1) == ' ')
 		g->map.ceiling = ft_color(line);
 	else if (line[0])
 		return (1);
