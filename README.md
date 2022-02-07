@@ -1,6 +1,6 @@
 # Cub3D
 
-This project is inspired by the world-renowned eponymous game Wolfenstein 3D, considered to be the first FPS. The goal is to make a dynamic view inside a maze by applying Raycasting.
+This project is inspired by the world-renowned eponymous game Wolfenstein 3D, considered to be the first FPS. The goal is to make a dynamic view inside a maze from afirst-person perspective by applying Raycasting.
 
 
 
