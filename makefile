@@ -1,6 +1,7 @@
 LIBFT 	:= ./printf/libft/
 PRINTF	:= ./printf/
 GNL 	:= ./gnl/
+MLX 	:= ./minilibx_opengl/
 CUB3D 	:= ./cub/
 
 SRCS 	:= 	$(wildcard $(LIBFT)*.c) \
@@ -14,16 +15,16 @@ OBJS	:= $(SRCS:%.c=%.o)
 NAME	:= cub3D
 
 CC			:= gcc
-MLXFLAGS 	:= -lmlx -framework OpenGL -framework AppKit -lm #-fsanitize=address -g3
+MLXFLAGS 	:= -framework OpenGL -framework AppKit
 
-CFLAGS		:= -Wall -Werror -Wextra -I. -o $(NAME)
+CFLAGS		:= -Wall -Werror -Wextra -o $(NAME)
 
 RM		:= rm -f
 
-all:		libft $(NAME)
+all:		libft mlx $(NAME)
 
 $(NAME): ${OBJS}
-			$(CC) $(OBJS) $(CFLAGS) $(MLXFLAGS) -L$(LIBFT)
+			$(CC) $(CFLAGS) $(OBJS) $(LIBFT)/libft.a $(MLX)/libmlx.a $(MLXFLAGS)
 
 $(%.o): $(%.c)
 			$(CC) -c $^-o $@
@@ -31,14 +32,18 @@ $(%.o): $(%.c)
 libft:
 			make -C $(LIBFT)
 
+mlx:
+			make -C $(MLX)
 
 clean:
 				$(RM) $(OBJS)
 				make -C $(LIBFT) clean
+				make -C $(MLX) clean
 
 fclean: clean
 				$(RM) $(NAME)
 				make -C $(LIBFT) fclean
+				make -C $(MLX) clean
 
 re:				fclean all
 

@@ -1,4 +1,4 @@
-R 1320 1080
+R 800 600
 NO ./textures/no.xpm
 SO ./textures/so.xpm
 WE ./textures/we.xpm

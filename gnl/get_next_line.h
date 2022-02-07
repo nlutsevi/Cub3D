@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 17:25:33 by nlutsevi          #+#    #+#             */
-/*   Updated: 2020/12/08 20:19:11 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 02:20:52 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <sys/types.h>
 # include <fcntl.h>
 # include <unistd.h>
-# include "../libft/libft.h"
+# include "../printf/libft/libft.h"
 
 int		get_next_line(int fd, char **line);
 

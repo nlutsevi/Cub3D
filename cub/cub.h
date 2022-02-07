@@ -6,7 +6,7 @@
 /*   By: nlutsevi <nlutsevi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 20:07:57 by nlutsevi          #+#    #+#             */
-/*   Updated: 2021/02/14 18:02:25 by nlutsevi         ###   ########.fr       */
+/*   Updated: 2022/02/07 03:35:59 by nlutsevi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,7 @@
 # include "../printf/libft/libft.h"
 # include "../printf/ft_printf.h"
 # include <stdio.h>
-# include "../mlx/mlx.h"
-# include "../mlx_beta/mlx.h"
+# include "../minilibx_opengl/mlx.h"
 # include <math.h>
 
 typedef struct	s_res
