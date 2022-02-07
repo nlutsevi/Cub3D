@@ -47,6 +47,16 @@ make fclean
 
 #### Map elements
 
+![Screenshot 2022-02-07 at 04 56 30](https://user-images.githubusercontent.com/60663416/152722504-753612ac-fa51-40e3-8333-c6e4e41c5f96.png)
+![Screenshot 2022-02-07 at 04 58 48](https://user-images.githubusercontent.com/60663416/152722520-b7f5f5ec-c5bb-45b4-bb0f-6c5e19c3127c.png)
+![Screenshot 2022-02-07 at 04 59 03](https://user-images.githubusercontent.com/60663416/152722496-ebc1a796-dd5a-4599-8450-5124067a7a7e.png)
+![Screenshot 2022-02-07 at 04 59 11](https://user-images.githubusercontent.com/60663416/152722506-40a176dc-5aa8-4ba6-aee9-4d5d97090982.png)
+![Screenshot 2022-02-07 at 04 59 19](https://user-images.githubusercontent.com/60663416/152722516-6376c86c-879b-4f18-90cc-c72136943f24.png)
+![Screenshot 2022-02-07 at 04 59 30](https://user-images.githubusercontent.com/60663416/152722529-5730acf1-e774-4314-a686-585da27f9e5a.png)
+
+
+#### Example of a valid map
+
 
 
 
