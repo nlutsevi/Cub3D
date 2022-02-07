@@ -1,12 +1,14 @@
-Resumen: Este proyecto está inspirado en el juego epónimo mundialmente conocido,
-considerado como el primer FPS jamás realizado. Le permitirá explorar la técnica del
-ray-casting. Su objetivo será crear una vista dinámica dentro de un laberinto, en el que
-tendrá que encontrar la salida.
+# Cub3D
 
-Los objetivos de este proyecto son parecidos a los de los demás proyectos: Rigor, utilización del C, utilización de algoritmos básicos, búsqueda de información, etc.
-Como es un proyecto de diseño gráfico, Cub3D le va a permitir practicar sus dotes de
-diseñador: ventanas, colores, eventos, formas, etc.
-En definitiva, Cub3D es un área de juego extraordinaria para explorar aplicaciones
-prácticas de las matemáticas sin necesidad que comprender los detalles.
-Gracias a la información disponible en Internet, va a utilizar las matemáticas como
-una herramienta para crear algoritmos elegantes y eficaces.
+This project is inspired by the world-renowned eponymous game Wolfenstein 3D, considered to be the first FPS. The goal is to make a dynamic view inside a maze by applying Raycasting.
+
+
+
+
+Here is the diagram of the result:
+
+![Screenshot 2022-02-06 at 03 01 39](https://user-images.githubusercontent.com/60663416/152665185-7ccac267-5f7c-48b5-a0e5-df0f48d1713b.png)
+
+## VirtualBox setup
+
+#### 1. Install and configure your VirtualBox environment. I have installed Debian.
