@@ -57,6 +57,7 @@ make fclean
 
 #### Example of a valid map
 
+![Screenshot 2022-02-07 at 05 04 06](https://user-images.githubusercontent.com/60663416/152722733-3b1e62c9-a9e7-4d52-b976-cf9048d0d15f.png)
 
 
 
